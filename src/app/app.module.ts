@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { DataTablesModule } from 'angular-datatables';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ListeUsersComponent } from './liste-users/liste-users.component';
+import { ListePostComponent } from './liste-post/liste-post.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ListeUsersComponent } from './liste-users/liste-users.component';
     DrpipePipe,
     MedecinComponent,
 
-    ListeUsersComponent
+    ListeUsersComponent,
+      ListePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [
     provideClientHydration()

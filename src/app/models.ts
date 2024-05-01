@@ -5,3 +5,10 @@ export interface Medecin{
     grade:string,
     image:string
 }
+export interface Post
+{
+  userId: number,
+  id: number,
+  title: string,
+  body: string
+}

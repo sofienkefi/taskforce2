@@ -1,1 +1,21 @@
-<p>liste-users works!</p>
+
+<table  datatable class="table table-danger table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NOM</th>
+        <th scope="col">PRENOM</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+   
+       
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
