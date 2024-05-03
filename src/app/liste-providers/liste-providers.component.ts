@@ -11,11 +11,16 @@ export class ListeProvidersComponent implements OnInit{
   constructor(private ProviderService:ProviderService){}
   providers : Providers[]=[];
   ngOnInit(): void {
+    this.refresh();
+
+  }
+  refresh(){
     this.ProviderService.getProvider().subscribe(
-      (data:Providers[])=>{
+      (data: Providers[]) => {
         console.log(data);
-        this.providers=data;},
-      error => console.log(error)
+        this.providers = data;
+      },
+      (error) => console.log(error)
     );
   }
 
