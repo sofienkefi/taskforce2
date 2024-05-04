@@ -24,7 +24,7 @@ export class ListeProvidersComponent implements OnInit {
   refresh() {
     this.ProviderService.getProvider().subscribe(
       (data: Providers[]) => {
-        console.log(data);
+       // console.log(data);
         this.providers = data;
       },
       (error) => console.log(error)
@@ -34,5 +34,9 @@ export class ListeProvidersComponent implements OnInit {
     this.ProviderService.deleteProvider(provider).subscribe((data) => {
       this.refresh();
     });
+  }
+  updateProvider(provider:any){
+    //alert(provider.id);
+    this.router.navigate(["updateProvider",provider.id]);
   }
 }
