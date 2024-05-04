@@ -13,8 +13,14 @@ export interface Post
   body: string
 }
 export interface Providers {
-  id: number;
+  id?: number;
   name: string;
   address: string;
   email: string;
+}
+export interface Users {
+  id: number;
+  name: string;
+  username: string;
+
 }

@@ -1,5 +1,5 @@
 <h2 align="center">Liste des providers</h2>
-<button type="button" class="btn btn-primary">ADD</button>
+<button type="button" class="btn btn-primary" (click)="goAdd()">ADD</button><br/><br/>
 
 <table class="table table-bordered">
   <thead class="table-dark">
@@ -19,7 +19,7 @@
       <td>{{provider.address}}</td>
       <td>{{provider.email}}</td>
       <td><button type="button" class="btn btn-danger">Update</button></td>
-      <td><button type="button" class="btn btn-warning">Delete</button></td>
+      <td><button type="button" class="btn btn-warning" (click)="deleteProvider(provider)">Delete</button></td>
     </tr>
   </tbody>
 </table>
