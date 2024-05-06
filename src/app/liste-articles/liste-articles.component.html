@@ -1,0 +1,27 @@
+<h2 align="center">Liste des Article</h2>
+<button type="button" class="btn btn-primary" (click)="goAdd()">ADD</button><br/><br/>
+
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>ID </th>
+      <th>label</th>
+      <th>price</th>
+      <th>picture</th>
+      <th>provider</th>
+      <th>UPDATE</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let article of articles" >
+      <td>{{article.id}}</td>
+      <td>{{article.label}}</td>
+      <td>{{article.price}}</td>
+      <td>{{article.picture}}</td>
+       <td>{{article.provider.name}}</td>
+      <td><button type="button" class="btn btn-warning" >Update</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="deleteArticle(article)" >Delete</button></td>
+    </tr>
+  </tbody>
+</table>
