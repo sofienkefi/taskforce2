@@ -23,7 +23,7 @@ export class ListeArticlesComponent implements OnInit {
       (data: Article[]) => {
         this.articles = data;
       },
-      (error) => console.log(error)
+      //(error) => console.log(error)
     );
   }
   deleteArticle(article: Article) {

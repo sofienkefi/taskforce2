@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Providers } from '../models';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 
 @Injectable({
@@ -8,8 +8,11 @@ import { environment } from '../../environments/environment.development';
 })
 export class ProviderService {
   constructor(private http: HttpClient) {}
+ // token : any = sessionStorage.getItem('jwtToken');
   getProvider() {
-    return this.http.get<Providers[]>(environment.baseUrl + '/providers');
+   // const headers = new HttpHeaders({Authorization :'Bearer ' + this.token});
+  //  return this.http.get<Providers[]>(environment.baseUrl + '/providers',{headers});
+  return this.http.get<Providers[]>(environment.baseUrl + '/providers');
   }
   addProvider(provider: Providers) {
     return this.http.post<Providers>(

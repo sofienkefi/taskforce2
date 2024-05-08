@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { ArticleService } from './../service/article.service';
 import { Component } from '@angular/core';
-import { error } from 'node:console';
 import { ProviderService } from '../service/provider.service';
 import { Providers } from '../models';
 
